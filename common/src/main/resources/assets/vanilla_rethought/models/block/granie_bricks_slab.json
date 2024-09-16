@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "vanilla_rethought:block/granie_bricks",
+    "side": "vanilla_rethought:block/granie_bricks",
+    "top": "vanilla_rethought:block/granie_bricks"
+  }
+}

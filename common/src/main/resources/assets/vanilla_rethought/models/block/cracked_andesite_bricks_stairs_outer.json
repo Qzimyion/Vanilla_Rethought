@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "vanilla_rethought:block/cracked_andesite_bricks",
+    "side": "vanilla_rethought:block/cracked_andesite_bricks",
+    "top": "vanilla_rethought:block/cracked_andesite_bricks"
+  }
+}

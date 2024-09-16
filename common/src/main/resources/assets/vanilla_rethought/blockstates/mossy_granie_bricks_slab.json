@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanilla_rethought:block/mossy_granie_bricks_slab"
+    },
+    "type=double": {
+      "model": "vanilla_rethought:block/mossy_granie_bricks"
+    },
+    "type=top": {
+      "model": "vanilla_rethought:block/mossy_granie_bricks_slab_top"
+    }
+  }
+}

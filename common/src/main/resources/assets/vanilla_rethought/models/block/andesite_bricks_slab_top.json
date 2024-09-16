@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "vanilla_rethought:block/andesite_bricks",
+    "side": "vanilla_rethought:block/andesite_bricks",
+    "top": "vanilla_rethought:block/andesite_bricks"
+  }
+}

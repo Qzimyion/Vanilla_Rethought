@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanilla_rethought:block/andesite_tiles_slab"
+    },
+    "type=double": {
+      "model": "vanilla_rethought:block/andesite_tiles"
+    },
+    "type=top": {
+      "model": "vanilla_rethought:block/andesite_tiles_slab_top"
+    }
+  }
+}

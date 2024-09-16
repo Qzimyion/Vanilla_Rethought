@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "vanilla_rethought:block/cracked_diorite_bricks",
+    "side": "vanilla_rethought:block/cracked_diorite_bricks",
+    "top": "vanilla_rethought:block/cracked_diorite_bricks"
+  }
+}

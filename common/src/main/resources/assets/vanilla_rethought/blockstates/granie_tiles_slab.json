@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanilla_rethought:block/granie_tiles_slab"
+    },
+    "type=double": {
+      "model": "vanilla_rethought:block/granie_tiles"
+    },
+    "type=top": {
+      "model": "vanilla_rethought:block/granie_tiles_slab_top"
+    }
+  }
+}
