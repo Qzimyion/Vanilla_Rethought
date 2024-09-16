@@ -30,6 +30,12 @@ configurations {
     }
 }
 
+ repositories{
+     maven {
+         url = "https://api.modrinth.com/maven"
+     }
+ }
+
 dependencies {
     forge "net.minecraftforge:forge:$rootProject.forge_version"
 
@@ -38,6 +44,8 @@ dependencies {
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
+    modImplementation "maven.modrinth:midnightlib:${midnightlib_version}-forge"
+    implementation "maven.modrinth:moonlight:forge_1.20-2.8.58"
 }
 
 processResources {

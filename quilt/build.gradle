@@ -4,6 +4,9 @@ plugins {
 
 repositories {
     maven { url 'https://maven.quiltmc.org/repository/release/' }
+    maven {
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 architectury {
@@ -30,6 +33,7 @@ configurations {
 
 dependencies {
     modImplementation "org.quiltmc:quilt-loader:$rootProject.quilt_loader_version"
+    //modImplementation "org.quiltmc:qsl:10.0.0-alpha.1+1.20.1"
 
     // Quilt Standard Libraries and QSL.
     modImplementation "org.quiltmc.quilted-fabric-api:quilted-fabric-api:$rootProject.quilted_fabric_api_version"
@@ -45,6 +49,7 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionQuilt')
     common(project(path: ':fabric-like', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':fabric-like', configuration: 'transformProductionQuilt')
+    modImplementation "maven.modrinth:midnightlib:${midnightlib_version}-quilt"
 }
 
 processResources {
