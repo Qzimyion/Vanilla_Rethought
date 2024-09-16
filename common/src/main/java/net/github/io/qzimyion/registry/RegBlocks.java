@@ -5,32 +5,106 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 import java.util.function.Supplier;
 
 import static net.github.io.qzimyion.VanillaRethoughtCommon.MOD_ID;
 
+@SuppressWarnings("SameParameterValue")
 public class RegBlocks {
-
-    /** A simple way to register blocks on multi-loader with Arch API.
-     The method is reminiscent of how you'd register stuff on forge
-     This also applies to other objects like Items, Mobs and more. (Events are an exception, but we'll get to them later)
-     */
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(MOD_ID, Registries.BLOCK);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, Registries.ITEM);
 
+    //==Vanilla Stone==//
 
-    // Example Content
-    public static final RegistrySupplier<Block> SKIBIDI_BLOCK = registerBlock("block_of_skibidi", ()-> new
-            Block(BlockBehaviour.Properties.copy(Blocks.STONE)), true);
 
-    public static final  RegistrySupplier<Block> SUSSY_BLOCK = registerBlock("block_of_sussy", ()-> new Block(BlockBehaviour.Properties.of()
-            .destroyTime(10f).instrument(NoteBlockInstrument.BIT)), false);
+    //==Andesite==//
+    public static final RegistrySupplier<Block> ANDESITE_BRICKS = registerBlock("andesite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_BRICKS_SLAB = registerBlock("andesite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_BRICKS_STAIRS = registerBlock("andesite_bricks_stairs", ()-> new StairBlock(ANDESITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_BRICKS_WALL = registerBlock("andesite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_BRICKS = registerBlock("cracked_andesite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_BRICKS_SLAB = registerBlock("cracked_andesite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_BRICKS_STAIRS = registerBlock("cracked_andesite_bricks_stairs", ()-> new StairBlock(CRACKED_ANDESITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_BRICKS_WALL = registerBlock("cracked_andesite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_BRICKS = registerBlock("mossy_andesite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_BRICKS_SLAB = registerBlock("mossy_andesite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_BRICKS_STAIRS = registerBlock("mossy_andesite_bricks_stairs", ()-> new StairBlock(CRACKED_ANDESITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_BRICKS_WALL = registerBlock("mossy_andesite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CHISELED_ANDESITE_BRICKS = registerBlock("chiseled_andesite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_CHISELED_ANDESITE_BRICKS = registerBlock("cracked_chiseled_andesite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_TILES = registerBlock("andesite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_TILES_SLAB = registerBlock("andesite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_TILES_STAIRS = registerBlock("andesite_tiles_stairs", ()-> new StairBlock(ANDESITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> ANDESITE_TILES_WALL = registerBlock("andesite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_TILES = registerBlock("cracked_andesite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_TILES_SLAB = registerBlock("cracked_andesite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_TILES_STAIRS = registerBlock("cracked_andesite_tiles_stairs", ()-> new StairBlock(ANDESITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_ANDESITE_TILES_WALL = registerBlock("cracked_andesite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_TILES = registerBlock("mossy_andesite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_TILES_SLAB = registerBlock("mossy_andesite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_TILES_STAIRS = registerBlock("mossy_andesite_tiles_stairs", ()-> new StairBlock(ANDESITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_ANDESITE_TILES_WALL = registerBlock("mossy_andesite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+
+    //==Diorite==//
+    public static final RegistrySupplier<Block> DIORITE_BRICKS = registerBlock("diorite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_BRICKS_SLAB = registerBlock("diorite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_BRICKS_STAIRS = registerBlock("diorite_bricks_stairs", ()-> new StairBlock(DIORITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_BRICKS_WALL = registerBlock("diorite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_BRICKS = registerBlock("cracked_diorite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_BRICKS_SLAB = registerBlock("cracked_diorite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_BRICKS_STAIRS = registerBlock("cracked_diorite_bricks_stairs", ()-> new StairBlock(CRACKED_DIORITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_BRICKS_WALL = registerBlock("cracked_diorite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_BRICKS = registerBlock("mossy_diorite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_BRICKS_SLAB = registerBlock("mossy_diorite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_BRICKS_STAIRS = registerBlock("mossy_diorite_bricks_stairs", ()-> new StairBlock(CRACKED_DIORITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_BRICKS_WALL = registerBlock("mossy_diorite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CHISELED_DIORITE_BRICKS = registerBlock("chiseled_diorite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_CHISELED_DIORITE_BRICKS = registerBlock("cracked_chiseled_diorite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_TILES = registerBlock("diorite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_TILES_SLAB = registerBlock("diorite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_TILES_STAIRS = registerBlock("diorite_tiles_stairs", ()-> new StairBlock(DIORITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> DIORITE_TILES_WALL = registerBlock("diorite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_TILES = registerBlock("cracked_diorite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_TILES_SLAB = registerBlock("cracked_diorite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_TILES_STAIRS = registerBlock("cracked_diorite_tiles_stairs", ()-> new StairBlock(DIORITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_DIORITE_TILES_WALL = registerBlock("cracked_diorite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_TILES = registerBlock("mossy_diorite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_TILES_SLAB = registerBlock("mossy_diorite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_TILES_STAIRS = registerBlock("mossy_diorite_tiles_stairs", ()-> new StairBlock(DIORITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_DIORITE_TILES_WALL = registerBlock("mossy_diorite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+
+    //==Granite==//
+    public static final RegistrySupplier<Block> GRANITE_BRICKS = registerBlock("granite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_BRICKS_SLAB = registerBlock("granite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_BRICKS_STAIRS = registerBlock("granite_bricks_stairs", ()-> new StairBlock(GRANITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_BRICKS_WALL = registerBlock("granite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_BRICKS = registerBlock("cracked_granite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_BRICKS_SLAB = registerBlock("cracked_granite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_BRICKS_STAIRS = registerBlock("cracked_granite_bricks_stairs", ()-> new StairBlock(CRACKED_GRANITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_BRICKS_WALL = registerBlock("cracked_granite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_BRICKS = registerBlock("mossy_granite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_BRICKS_SLAB = registerBlock("mossy_granite_bricks_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_BRICKS_STAIRS = registerBlock("mossy_granite_bricks_stairs", ()-> new StairBlock(CRACKED_GRANITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_BRICKS_WALL = registerBlock("mossy_granite_bricks_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CHISELED_GRANITE_BRICKS = registerBlock("chiseled_granite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_CHISELED_GRANITE_BRICKS = registerBlock("cracked_chiseled_granite_bricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_TILES = registerBlock("granite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_TILES_SLAB = registerBlock("granite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_TILES_STAIRS = registerBlock("granite_tiles_stairs", ()-> new StairBlock(GRANITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> GRANITE_TILES_WALL = registerBlock("granite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_TILES = registerBlock("cracked_granite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_TILES_SLAB = registerBlock("cracked_granite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_TILES_STAIRS = registerBlock("cracked_granite_tiles_stairs", ()-> new StairBlock(GRANITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> CRACKED_GRANITE_TILES_WALL = registerBlock("cracked_granite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_TILES = registerBlock("mossy_granite_tiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_TILES_SLAB = registerBlock("mossy_granite_tiles_slab", ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_TILES_STAIRS = registerBlock("mossy_granite_tiles_stairs", ()-> new StairBlock(GRANITE_BRICKS.get().defaultBlockState() ,BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+    public static final RegistrySupplier<Block> MOSSY_GRANITE_TILES_WALL = registerBlock("mossy_granite_tiles_wall", ()-> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), true);
+
 
     // Reg methods
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block, boolean isBlockItem) {
