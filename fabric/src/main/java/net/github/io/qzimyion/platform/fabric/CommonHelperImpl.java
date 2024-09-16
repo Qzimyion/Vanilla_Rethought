@@ -14,10 +14,6 @@ import static net.github.io.qzimyion.VanillaRethoughtCommon.MOD_ID;
 
 public class CommonHelperImpl {
 
-    /** Do keep in mind that this is not necessary to do when you have arch API installed in your multiloader setup.
-     * This is just for the process to demonstrate how to use the @ExpectPlatform annotation provided by the Arch API.
-     */
-
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
         T registry = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MOD_ID, name), item.get());
         return () -> registry;

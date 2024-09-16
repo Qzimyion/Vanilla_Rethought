@@ -11,13 +11,6 @@ import java.util.function.Supplier;
 
 public class CommonHelper {
 
-    /**
-     *One of the examples of using an {@code @ExpectPlatform} annotation for loader specific methods
-     * like for example these entity registration methods.
-     *
-     * To see the full implementation of this, please go to the other loader subproject and search for an {@code CommonHelperImpl} class
-     */
-
     @ExpectPlatform
     public static <T extends Item, M extends Mob> Supplier<T> registerSpawnEggItem(String name, Supplier<EntityType<M>> entityType, int backgroundColor, int highlightColor) {
         throw new AssertionError();
