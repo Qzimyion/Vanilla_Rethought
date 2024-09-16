@@ -15,6 +15,9 @@
   "icon": "assets/vanilla_rethought/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "net.github.io.qzimyion.fabric.datagen.VanillaRethoughDatagenFabric"
+    ],
     "main": [
       "net.github.io.qzimyion.fabric.ExampleModFabric"
     ],
